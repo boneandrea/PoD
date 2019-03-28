@@ -16,4 +16,4 @@ cp *.otf /usr/share/fonts/noto && \
 chmod 644 -R /usr/share/fonts/noto/
 RUN fc-cache -fv && rm -rf /tmp/noto
 WORKDIR /tmp
-#RUN npm install puppeteer
+RUN npm install puppeteer
