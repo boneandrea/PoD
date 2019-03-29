@@ -15,5 +15,7 @@ mkdir -p /usr/share/fonts/noto && \
 cp *.otf /usr/share/fonts/noto && \
 chmod 644 -R /usr/share/fonts/noto/
 RUN fc-cache -fv && rm -rf /tmp/noto
-WORKDIR /tmp
+
+# puppeteer
+WORKDIR /home/site/wwwroot/MyHttpTrigger
 RUN npm install puppeteer
