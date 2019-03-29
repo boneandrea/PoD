@@ -10,7 +10,9 @@ module.exports = async function(context, req) {
     const url = req.query.url
 
     context.log(url)
-    const browser = await puppeteer.launch()
+    const browser = await puppeteer.launch({
+      args: ["--no-sandbox", "--disable-setuid-sandbox"]
+    })
     const page = await browser.newPage()
     await page.goto(url)
     const base64 = await page.screenshot({encoding: "base64"})
