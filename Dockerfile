@@ -18,4 +18,4 @@ RUN fc-cache -fv && rm -rf /tmp/noto
 
 # puppeteer
 WORKDIR /home/site/wwwroot/MyHttpTrigger
-RUN npm install puppeteer
+RUN npm install
